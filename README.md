@@ -10,3 +10,7 @@ The entrypoint for the source can be found at [github](https://github.com/ownclo
 * Load Global Site Attributes
 * Print Attributes Used in Playbook
 * Print Attributes Used in Component Descriptor
+
+**Asciidoc:**
+* Add Tab Sets
+* Include Content via URL in Antora
