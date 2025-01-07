@@ -1,6 +1,8 @@
 # Create an Elastic Search Index
 
-This extension creates an Elastic Search index.
+This extension creates an Elastic Search index and makes it usable for searching.
+
+Note, the ES server setup is NOT described here!
 
 For details see\
 doc.owncloud.com,\
