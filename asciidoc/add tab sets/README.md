@@ -3,7 +3,7 @@
 Extends the AsciiDoc syntax to support a tabset element.\
 The tabset is created from a dlist that is enclosed in an example block marked with the tabs style.
 
-Derived from [Asciidoctor Tabs](https://github.com/asciidoctor/asciidoctor-tabs).
+This is **not** the original implementation but derived from [Asciidoctor Tabs](https://github.com/asciidoctor/asciidoctor-tabs).
 
 Usage:
 ```asciidoc 
@@ -33,5 +33,6 @@ Contents of tab B.
    ```
 3. Integrate tabs to your UI:\
 File: `tabs.css` --> `src/css/`\
-File: `07-tabs.js` --> `src/js/` (name it as required)\
-Include: `@import url("tabs.css");` --> `src/css/site.css`
+File: `tabs-ui.js` --> `src/js/vendor`\
+Add: `@import url("tabs.css");` --> `src/css/site.css`\
+Add: `<script async src="{{{uiRootPath}}}/js/vendor/tabs-ui.js"></script>` --> `src/partials/footer-scripts.hbs`
