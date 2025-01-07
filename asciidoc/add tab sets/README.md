@@ -3,7 +3,7 @@
 Extends the AsciiDoc syntax to support a tabset element.\
 The tabset is created from a dlist that is enclosed in an example block marked with the tabs style.
 
-This is **not** the original implementation but derived from [Asciidoctor Tabs](https://github.com/asciidoctor/asciidoctor-tabs).
+This is derived from [Asciidoctor Tabs](https://github.com/asciidoctor/asciidoctor-tabs) and **not** its original implementation.
 
 Usage:
 ```asciidoc 
