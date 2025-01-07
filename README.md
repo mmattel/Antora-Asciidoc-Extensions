@@ -11,6 +11,7 @@ The entrypoint for the source can be found at [github](https://github.com/ownclo
 * Print Attributes Used in Playbook
 * Print Attributes Used in Component Descriptor
 * Print Component Version File Table
+* Create an Elastic Search Index
 
 **Asciidoc:**
 * Add Tab Sets
