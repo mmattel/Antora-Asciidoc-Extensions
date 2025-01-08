@@ -1,0 +1,53 @@
+.table-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px; /* Space for the button */
+}
+
+table.collapsible {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+table.collapsible.collapsed tr:nth-child(n+4) {
+  display: none;
+}
+
+table.collapsible.expanded tr:nth-child(n+4) {
+  display: table-row;
+}
+
+.expand-button {
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  line-height: 1.5;
+  border-radius: 0 0 6px 6px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-top: none;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: -28px; /* Adjust based on button height */
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.expand-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style for the partially visible row */
+table.collapsible.collapsed tr:nth-child(3) {
+  position: relative;
+  opacity: 0.3;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  display: table-row !important;
+  height: 10px; /* Adjust to control visibility of 4th row */
+  overflow: hidden;
+}
