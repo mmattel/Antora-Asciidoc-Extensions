@@ -16,3 +16,7 @@ The entrypoint for the source can be found at [github](https://github.com/ownclo
 **Asciidoc:**
 * Add Tab Sets
 * Include Content via URL in Antora
+
+**Antora UI Only**
+* Collapsible Tables
+* Medium-Zoom
