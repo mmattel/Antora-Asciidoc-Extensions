@@ -33,7 +33,7 @@ you do not include the versions in the local build.
 3. Prepare the global attribute file you want to include and make it available.\
 Most easiest, you _move_ all attributes from the global existing playbook (site.yml) into an own file.
 4. Add `"js-yaml": "^4.1.0",` --> `dependencies` --> `package.json`\
-Run `npm install` to update your dependencies. 
+Run `npm install` to update your dependencies.
 
 ## Check the Result
 

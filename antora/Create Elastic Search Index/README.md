@@ -35,6 +35,7 @@ In the UI
 
 4. Add `"elasticsearch-browser": "^16.7.1",` --> `dependencies` --> `package.json`\
 Run `npm install` to update your dependencies.\
+Create a new bundle.\
 Note: use the elastic search version that fits your needs.
 5. Add to `./src/partials/footer-scripts.hbs`:
    ```
