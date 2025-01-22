@@ -48,6 +48,17 @@ All other references CAN be resolved which includes the following patterns. The 
 6. `image:` and `image::` using full paths
 7. `image:` and `image::` using relative paths like `./sub_path/image.png`
 
+## Pitfalls
+
+This is a list of possible pitfalls which will be extended when neccessary.
+
+* If there are multiple sources defined in `site.yml`, define the filters in `excludecomponents` and `pathfilter` in a way where it only returns results for the current repository (component) to avoid false positives. Foreign repositores are not checked. 
+
+* Missing relative directory:\
+Reported: `modules/<module>/pages/path_part_1/path_part_2/_files.adoc`\
+ls: `modules/<module>/pages/path_part_1/path_part_2/_files.adoc` --> ok\
+grep -rn \_files.adoc --> `include::path_part_2/_files.adoc[leveloffset=+1]`\
+Solution: `include::./path_part_2/_files.adoc[leveloffset=+1]` (`./` was missing to make the path relative)
 
 ## Configuration
 
