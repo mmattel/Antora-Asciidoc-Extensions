@@ -43,3 +43,7 @@ Example:
 ## Check the Result
 
 To double check the successful integration, run a build and watch the log printed.
+
+## Changelog
+
+* Version 1.1 has an updated counting process. This aparently catched ones eyes when building using sources from a local filesystem. There, the script counted, for an unknown cause, all files of the repo instead only those ones which are in the modules directory . This is now fixed and counting is locked to files in the modules directory only independent of the build type.
