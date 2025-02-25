@@ -4,7 +4,7 @@ Allow including external content sourced from an URL via the `include::` macro.
 
 This extension is different compared to the [Antora Collector](https://gitlab.com/antora/antora-collector). Antora Collector gathers defined content into a family directory where it can be referenced as usual. It also offers offline capabilities.
 
-The `Include Content via URL` extension requires content referenced via an include macro to be available during the build process. It always downloads during the build process that content from the source referenced by the URL and makes it part of the build process. The big bonus is, that you can define the URL dynamically via attributes like when using versioned content.
+The `Include Content via URL` extension requires content referenced via an include macro to be available during the build process. It always downloads that content during the build process from the source referenced by the URL and makes it part of the build process. The big bonus is, that you can define the URL dynamically via attributes like when using versioned content.
 
 Such a mechanism is ideal when the sourcing repo contains many versioned auto-generated asciidoc files like product relevant tables and provides that content for a documentation which only needs to be included.
 
