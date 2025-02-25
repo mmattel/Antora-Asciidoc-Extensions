@@ -9,7 +9,7 @@ In a nutshell, the process of this extension is the following:
 It first gathers all files available in the contentCatalog.
 Then it looks for all references taken in each pages/partials and nav documents and creates a list of.
 Finally it removes all occurrences of found references from the available files list.
-The resulting list is now a set of files that are nowhere refernced - and are candidates for removal.
+The resulting list is now a set of files that are nowhere referenced - and are candidates for removal.
 
 Files that are nowhere refernced may still be a viable part to the content of the repo, like for information purposes. These files can be excluded from the orphaned list so they will not appear anymore in the results.
 
