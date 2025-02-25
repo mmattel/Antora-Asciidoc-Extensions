@@ -31,7 +31,16 @@ you do not include the versions in the local build.
        enabled: true
    ```
 3. Prepare the global attribute file you want to include and make it available.\
-Most easiest, you _move_ all attributes from the global existing playbook (site.yml) into an own file.
+Most easiest, _move_ all attributes from the global existing playbook (site.yml) into an own file. The playbook should the only contain the attributes definition:
+   ```
+   asciidoc:
+     attributes:
+     # branch-specific-variables: 'see antora.yml'
+     # global attributes loaded via antora extension
+     # any attributes added here will overwrite those loaded from the global file if extists
+     extensions:
+     ...
+   ```
 4. Add `"js-yaml": "^4.1.0",` --> `dependencies` --> `package.json`\
 Run `npm install` to update your dependencies.
 
