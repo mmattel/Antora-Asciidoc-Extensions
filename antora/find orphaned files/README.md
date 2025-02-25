@@ -17,7 +17,7 @@ Files that are nowhere refernced may still be a viable part to the content of th
 
 ### Runtime Limits
 
-* This extension can only run in repositories that contain content, which is defined at minimum by the precense of the `modules` directory, an `antora.yml` file and content files disributed in family directories. Building only repositories can not use this extension - this would not make sense anyways.
+* This extension can only run in repositories that contain content, which is defined at minimum by the precense of the `modules` directory, an `antora.yml` file and content files distributed in family directories. Building only repositories can not use this extension - this would not make sense anyways.
 
 * To use this extension, a content build should run without errors before, though warnings are ok. This guarantees that files required for the build process are fully available.
 
