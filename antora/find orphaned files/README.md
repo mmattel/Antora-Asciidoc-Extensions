@@ -48,17 +48,26 @@ All other references CAN be resolved which includes the following patterns. The 
 6. `image:` and `image::` using full paths
 7. `image:` and `image::` using relative paths like `./sub_path/image.png`
 
+Note that all macros either MUST start at the beginning of the line or need a leading blank to be identifiable. This is especially true in tables when starting a new row, see pitfalls below.
+
 ## Pitfalls
 
 This is a list of possible pitfalls which will be extended when neccessary.
 
-* If there are multiple sources defined in `site.yml`, define the filters in `excludecomponents` and `pathfilter` in a way where it only returns results for the current repository (component) to avoid false positives. Foreign repositores are not checked. 
+* If there are multiple sources defined in `site.yml`:\
+Define the filters in `excludecomponents` and `pathfilter` in a way where it only returns results for the current repository (component) to avoid false positives. Foreign repositores are not checked. 
 
 * Missing relative directory:\
-Reported: `modules/<module>/pages/path_part_1/path_part_2/_files.adoc`\
-ls: `modules/<module>/pages/path_part_1/path_part_2/_files.adoc` --> ok\
-grep -rn \_files.adoc --> `include::path_part_2/_files.adoc[leveloffset=+1]`\
-Solution: `include::./path_part_2/_files.adoc[leveloffset=+1]` (`./` was missing to make the path relative)
+Reported: `modules/<module>/pages/path_1/path_2/_files.adoc`\
+`ls modules/<module>/pages/path_1/path_2/_files.adoc` --> ok\
+`grep -rn \_files.adoc` --> file in `path_1` shows `include::path_2/_files.adoc[leveloffset=+1]`\
+Solution: `include::./path_2/_files.adoc[leveloffset=+1]` (`./` was missing to make the path relative)
+
+* Included files in a table are not properly identified:\
+Reported: `modules/<module>/images/path_1/path_2/image.png`\
+`ls modules/<module>/images/path_1/path_2/image.png` --> ok\
+`grep -rn image.png` --> `a|image::path_2/image.png[]`\
+Solution: `a| image::path_1/path_2/image.png[]` (add whitespace after `a|`) 
 
 ## Configuration
 
@@ -111,3 +120,15 @@ Example:
 ## Check the Result
 
 To double check the successful integration, run a build and pipe the result into a file for ease of reviewing.
+
+## Mass Deletion of Orphaned Files
+
+* Change into the repo's root
+* Enable the extension and run it
+* Copy the output printed into a file such as `to_delete.txt`
+* Run `xargs rm <to_delete.txt`
+* Remove `to_delete.txt`
+* Rerun the extension to see if all is gone
+* Disable the extension and run a normal build, check if building has errors.\
+If this happens take back the deleted file in question and fix the problem
+* Create a PR and merge it
