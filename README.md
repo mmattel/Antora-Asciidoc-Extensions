@@ -7,6 +7,7 @@ Note that most, but not all of the extensions are used for building [doc.ownclou
 The entrypoint for the source when used can be found at [github](https://github.com/owncloud/docs).
 
 **Antora:**
+* [Antora Xref Extension](<./antora/antora xref extension/README.md>)
 * [Create an Elastic Search Index](<./antora/create elastic search index/README.md>)
 * [Find Orphaned Files](<./antora/find orphaned files/README.md>)
 * [Load Global Site Attributes](<./antora/dynamic loading attributes/README.md>)
