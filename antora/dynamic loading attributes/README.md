@@ -31,7 +31,7 @@ you do not include the versions in the local build.
        enabled: true
    ```
 3. Prepare the global attribute file you want to include and make it available.\
-Most easiest, _move_ all attributes from the global existing playbook (site.yml) into an own file. The playbook should the only contain the attributes definition:
+Most easiest, _move_ all attributes from the global existing playbook (site.yml) into an own file. The playbook will then only contain the attributes definition:
    ```
    asciidoc:
      attributes:
