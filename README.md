@@ -23,4 +23,6 @@ The entrypoint for the source when used can be found at [github](https://github.
 
 **Antora UI Only**
 * [Collapsible Tables](<./ui-only/collapsible tables/README.md>)
+* [Dark Mode](<./ui-only/darkmode/README.md>)
+* [Fontawsome](<./ui-only/fontawsome/README.md>)
 * [Medium-Zoom](<./ui-only/mediumzoom/README.md>)
