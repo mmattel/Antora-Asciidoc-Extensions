@@ -22,7 +22,7 @@ The class attribute (role) `.collapsible` must be the first argument. If `cols=.
 ## Setup
 
 1. Integrate collapsible-table to your UI:\
-File: `collapsible-table.css` --> `src/css/`\
-File: `collapsible-table.js` --> `src/js/vendor`\
+File: [collapsible-table.css](./collapsible-table.css) --> `src/css/`\
+File: [collapsible-table.js](./collapsible-table.js) --> `src/js/vendor`\
 Add: `@import url("collapsible-table.css");` --> `src/css/site.css`\
 Add: `<script async src="{{{uiRootPath}}}/js/vendor/collapsible-table.js"></script>` --> `src/partials/footer-scripts.hbs`
