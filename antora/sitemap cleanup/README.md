@@ -58,7 +58,7 @@ Print the contents of the changed sitemap file. This is intended for testing pur
 ## Setup
 
 1. Save the extension to a location where you store your antora extensions like `./ext-antora/`.
-2. Add the extension to your playbook (site.yml):
+2. Add the extension to your playbook:
    ```yml
    antora:
      extensions:
