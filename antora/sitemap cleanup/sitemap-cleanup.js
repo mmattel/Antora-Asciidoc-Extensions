@@ -223,7 +223,7 @@ async function parse_sitemap_file (total_sitemaps, output_dir, content, site_url
     // if nothing has changed, return
     if (!has_changed) {
       if (print_sitemap_found) {
-        logger.warn('No sitemap content has changed')
+        logger.warn('The content of the sitemap was not changed')
       }
       return
     }

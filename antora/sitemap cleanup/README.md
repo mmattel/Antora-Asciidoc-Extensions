@@ -115,7 +115,7 @@ Processing the following components, versions and number of files
 [11:41:22.339] WARN (sitemap-cleanup): Processing component: ios-app
 [11:41:22.340] WARN (sitemap-cleanup): New sitemap data successfully written back
 [11:41:22.342] WARN (sitemap-cleanup): Processing component: ROOT
-[11:41:22.343] WARN (sitemap-cleanup): No sitemap content has changed
+[11:41:22.343] WARN (sitemap-cleanup): The content of the sitemap was not changed
 [11:41:22.343] WARN (sitemap-cleanup): Processing component: webui
 [11:41:22.344] WARN (sitemap-cleanup): New sitemap data successfully written back
 [11:41:22.344] WARN (sitemap-cleanup): Processing component: server

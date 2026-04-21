@@ -4,7 +4,7 @@
  * Find Orphaned Files Extension.
  * Version 1.0.1
  * 
- * @param {Object} config   configuration object      - Configuration provided by site.yml
+ * @param {Object} config   configuration object      - Configuration provided by the playbook
  * @param {Bool}            config.printavailable     - Print available components/versions first
  * @param {String}          config.stopafterfind      - Stop build process after extension has run
  * @param {String}          config.falsepositives     - Ignore files collected in a file, 'modules/...' 
