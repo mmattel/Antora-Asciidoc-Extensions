@@ -54,7 +54,7 @@ Note that all macros either MUST start at the beginning of the line or need a le
 
 This is a list of possible pitfalls which will be extended when neccessary.
 
-* If there are multiple sources defined in `site.yml`:\
+* If there are multiple sources defined in the playbook:\
 Define the filters in `excludecomponents` and `pathfilter` in a way where it only returns results for the current repository (component) to avoid false positives. Foreign repositores are not checked. 
 
 * Missing relative directory:\
@@ -87,7 +87,7 @@ Files with file extensions defined in this array will not be considerated in the
 * `pathfilter`\
 Available files will be reduced by the match of any of the strings of this array in the file path. For example, if you add `attachments`, than any of the files will be removed that contain this string at any location in the path. While `attachments/` will remove results from the available list containing the matched directory only.
 * `excludecomponents`\
-Exclude components that you have defined additionally in your `site.yml` like to satisfy resolving links when building. These components will return 100% wrong results as the foreign content catalog is not considered. To identify possible components to exclude, enable `printavailable`.
+Exclude components that you have defined additionally in your playbook like to satisfy resolving links when building. These components will return 100% wrong results as the foreign content catalog is not considered. To identify possible components to exclude, enable `printavailable`.
 * `falsepositives`\
 Use this config to define a file which contents is taken to exclude from the found results. Empty lines a skipped. Lines starting with a `#` are considered as comment and are also skipped.\
 Example:
@@ -102,7 +102,7 @@ Example:
 ## Setup
 
 1. Save the extension to a location where you store your antora extensions like `./ext-antora/`.
-2. Add the extension to your playbook (site.yml):
+2. Add the extension to your playbook:
    ```yml
    antora:
      extensions:
