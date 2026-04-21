@@ -74,3 +74,50 @@ Print the contents of the changed sitemap file. This is intended for testing pur
 ## Check the Result
 
 To double check the successful integration, run a build and check the outcome of the sitemap files.
+
+## Example Output
+
+This is an example output from a rendering of the ownCloud documentation gathered from the CI. The first part is the output from an other extension named `Print Component Version File Table`, but it shows how things are related.
+
+```
+Processing the following components, versions and number of files
+┌─────────┬───────────┬─────────┬───────┐
+│ (index) │ Name      │ Version │ Files │
+├─────────┼───────────┼─────────┼───────┤
+│ 0       │ 'ROOT'    │ '~'     │ 15    │
+│ 1       │ 'server'  │ '10.15' │ 989   │
+│ 2       │ 'server'  │ '10.16' │ 989   │
+│ 3       │ 'server'  │ 'next'  │ 989   │
+│ 4       │ 'ocis'    │ '7.3'   │ 174   │
+│ 5       │ 'ocis'    │ '8.0'   │ 178   │
+│ 6       │ 'ocis'    │ 'next'  │ 178   │
+│ 7       │ 'webui'   │ 'next'  │ 35    │
+│ 8       │ 'desktop' │ '5.3'   │ 102   │
+│ 9       │ 'desktop' │ '6.0'   │ 136   │
+│ 10      │ 'desktop' │ 'next'  │ 129   │
+│ 11      │ 'ios-app' │ '12.5'  │ 86    │
+│ 12      │ 'ios-app' │ '12.6'  │ 86    │
+│ 13      │ 'ios-app' │ 'next'  │ 86    │
+│ 14      │ 'android' │ '4.6'   │ 47    │
+│ 15      │ 'android' │ '4.7'   │ 47    │
+│ 16      │ 'android' │ 'next'  │ 47    │
+│ 17      │           │         │ 4313  │
+└─────────┴───────────┴─────────┴───────┘
+
+...
+
+[11:41:22.334] WARN (sitemap-cleanup): Processing component: android
+[11:41:22.335] WARN (sitemap-cleanup): New sitemap data successfully written back
+[11:41:22.336] WARN (sitemap-cleanup): Processing component: ocis
+[11:41:22.338] WARN (sitemap-cleanup): New sitemap data successfully written back
+[11:41:22.338] WARN (sitemap-cleanup): Processing component: desktop
+[11:41:22.339] WARN (sitemap-cleanup): New sitemap data successfully written back
+[11:41:22.339] WARN (sitemap-cleanup): Processing component: ios-app
+[11:41:22.340] WARN (sitemap-cleanup): New sitemap data successfully written back
+[11:41:22.342] WARN (sitemap-cleanup): Processing component: ROOT
+[11:41:22.343] WARN (sitemap-cleanup): No sitemap content has changed
+[11:41:22.343] WARN (sitemap-cleanup): Processing component: webui
+[11:41:22.344] WARN (sitemap-cleanup): New sitemap data successfully written back
+[11:41:22.344] WARN (sitemap-cleanup): Processing component: server
+[11:41:22.363] WARN (sitemap-cleanup): New sitemap data successfully written back
+```
