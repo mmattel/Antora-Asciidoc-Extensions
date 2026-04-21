@@ -69,7 +69,7 @@ Print the contents of the changed sitemap file. This is intended for testing pur
       printcontent: false
       enabled: true
    ```
-3. Set `enabled` to `false` to skip the extension if not used. Sitemapdata will be kept as Antora creates it.8
+3. Set `enabled` to `false` to skip the extension if not used. Sitemap data will be kept as Antora created it.
 
 ## Check the Result
 
